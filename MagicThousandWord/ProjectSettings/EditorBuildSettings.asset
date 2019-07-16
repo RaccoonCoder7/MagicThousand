@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PolygonMini_Fantasy/Demo/Demo_Hex_ExampleTiles.unity
+    path: Assets/00.Scenes/MainScene.unity
     guid: 3a94f0f3782088749a3c2a3fcd4df2f5
   m_configObjects: {}

@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - TouchMgr
     Oculus.VR.Editor.dll:
     - OVRConfig
     Oculus.VR.dll:
@@ -26,7 +28,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/PolygonMini_Fantasy/Demo/Demo_Hex_ExampleTiles.unity:
+    Assets/00.Scenes/MainScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -47,6 +49,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -64,33 +68,35 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9404}
     - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9454}
     - Class: 114
-      Script: {instanceID: 9568}
+      Script: {instanceID: 9620}
     - Class: 114
-      Script: {instanceID: 9580}
+      Script: {instanceID: 9632}
     - Class: 114
-      Script: {instanceID: 9588}
+      Script: {instanceID: 9640}
     - Class: 114
-      Script: {instanceID: 9770}
+      Script: {instanceID: 9822}
     - Class: 114
-      Script: {instanceID: 9842}
+      Script: {instanceID: 9896}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9928}
     - Class: 114
-      Script: {instanceID: 10176}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10186}
+      Script: {instanceID: 10250}
     - Class: 114
-      Script: {instanceID: 10302}
+      Script: {instanceID: 10366}
     - Class: 114
-      Script: {instanceID: 10418}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10544}
+      Script: {instanceID: 10614}
     - Class: 114
-      Script: {instanceID: 16556}
+      Script: {instanceID: 17680}
+    - Class: 114
+      Script: {instanceID: 18450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -936,7 +942,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TouchMgr
   platform: 13
   scenePathNames:
-  - Assets/PolygonMini_Fantasy/Demo/Demo_Hex_ExampleTiles.unity
-  playerPath: D:/testMap/bilud/run.apk
+  - Assets/00.Scenes/MainScene.unity
+  playerPath: D:/magicThousand/MagicThousandWord/bilud/run.apk
