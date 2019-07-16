@@ -52,3 +52,6 @@ sysinfo.txt
 
 # Crashlytics generated file 
 crashlytics-build.properties
+/MagicThousandWord/Library/PackageCache
+/MagicThousandWord/Library/assetDatabase3
+/MagicThousandWord/Library/metadata
