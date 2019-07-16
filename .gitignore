@@ -5,9 +5,11 @@
 [Bb]uilds/ 
 [Ll]ogs/ 
 
+[Ll]ibrary/metadata/*
+[Ll]ibrary/metadata/*/*
+
 # Never ignore Asset meta data 
 ![Aa]ssets/**/*.meta 
-[Ll]ibrary/**/*
 
 # Uncomment this line if you wish to ignore the asset store tools plugin 
 # [Aa]ssets/AssetStoreTools* 
