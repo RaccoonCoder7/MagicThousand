@@ -31,7 +31,7 @@ public class TouchMgr : MonoBehaviour
             float dist = hit.distance;
             line.SetPosition(1, new Vector3(0, 0, dist));
         }
-        if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             if (Physics.Raycast(ray, out hit, 100.0f, layerBT))
             {
