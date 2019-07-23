@@ -14,7 +14,7 @@ public class TouchMgr : MonoBehaviour
     private RaycastHit hit;
     private Camera cam;
     private int layerBT;
-    
+
     private string[] texts;
     private List<string> dialogueList;
     private Text uiText;
@@ -23,9 +23,15 @@ public class TouchMgr : MonoBehaviour
     private int SkipNextCount = 0;
 
     private GameObject dialogObj;
-    private GameObject skipObj;
+    public GameObject skipObj;
     private GameObject moon;
     private GameObject sun;
+    private GameObject fire;
+    private GameObject tree;
+    private GameObject soil;
+    private GameObject brushPoint;
+
+    private Animator ani;
 
     enum State
     {
@@ -40,6 +46,7 @@ public class TouchMgr : MonoBehaviour
         line = GetComponent<LineRenderer>();
         layerBT = 1 << LayerMask.NameToLayer("DIALOGUE");
         cam = Camera.main;
+        brushPoint = GameObject.Find("brushPoint");
 
         dialogueList = new List<string>();
 
@@ -48,9 +55,14 @@ public class TouchMgr : MonoBehaviour
         skipObj = GameObject.Find("Skip");
         moon = GameObject.Find("moon");
         sun = GameObject.Find("sun");
+        fire = GameObject.Find("fire");
+        tree = GameObject.Find("tree");
+        soil = GameObject.Find("soil");
 
         TextAsset data = Resources.Load("DialogueText", typeof(TextAsset)) as TextAsset;
         StringReader sr = new StringReader(data.text);
+
+        ani = GameObject.Find("NPC").GetComponent<Animator>();
 
         string dialogueLine;
         dialogueLine = sr.ReadLine();
@@ -65,6 +77,9 @@ public class TouchMgr : MonoBehaviour
         skipObj.SetActive(false);
         moon.SetActive(false);
         sun.SetActive(false);
+        fire.SetActive(false);
+        tree.SetActive(false);
+        soil.SetActive(false);
 
         nowState = State.Next;
     }
@@ -90,13 +105,7 @@ public class TouchMgr : MonoBehaviour
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("SKIP")))
             {
-                SkipNextCount++;
-                CreateDialogueText(dialogueList[SkipNextCount]);
-                dialogObj.SetActive(true);
-                skipObj.SetActive(false);
-                moon.SetActive(false);
-                sun.SetActive(false);
-                StartCoroutine("Run");
+                EndDrawing();
             }
         }
 
@@ -121,21 +130,33 @@ public class TouchMgr : MonoBehaviour
         {
             yield return PlayLine(texts[nextDialogue]);
             nextDialogue++;
-        }else if (nextDialogue == texts.Length)
+        }
+        else if (nextDialogue == texts.Length)
         {
             dialogObj.SetActive(false);
             skipObj.SetActive(true);
             nextDialogue = 0;
 
-            if (SkipNextCount == 0)
+            switch (SkipNextCount)
             {
-                moon.SetActive(true);
-            }else if (SkipNextCount == 1)
-            {
-                sun.SetActive(true);
+                case 0:
+                    moon.SetActive(true);
+                    break;
+                case 1:
+                    sun.SetActive(true);
+                    break;
+                case 2:
+                    fire.SetActive(true);
+                    break;
+                case 3:
+                    tree.SetActive(true);
+                    break;
+                case 4:
+                    soil.SetActive(true);
+                    break;
             }
 
-            if (SkipNextCount == dialogueList.Count -1)
+            if (SkipNextCount == dialogueList.Count - 1)
             {
                 SceneManager.LoadScene("StartScene");
             }
@@ -144,14 +165,37 @@ public class TouchMgr : MonoBehaviour
 
     IEnumerator PlayLine(string text)
     {
+        if (ani.GetBool("CHAT"))
+        {
+            ani.SetBool("CHAT", false);
+        }
+        else
+        {
+            ani.SetBool("CHAT", true);
+        }
         nowState = State.Playing;
         for (int i = 0; i < text.Length + 1; i += 1)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.02f);
             uiText.text = text.Substring(0, i);
         }
 
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(0.5f);
         nowState = State.Next;
+    }
+
+    public void EndDrawing()
+    {
+        SkipNextCount++;
+        CreateDialogueText(dialogueList[SkipNextCount]);
+        dialogObj.SetActive(true);
+        skipObj.SetActive(false);
+        moon.SetActive(false);
+        sun.SetActive(false);
+        fire.SetActive(false);
+        tree.SetActive(false);
+        soil.SetActive(false);
+        brushPoint.transform.position = new Vector3(0, -3, 0);
+        StartCoroutine("Run");
     }
 }

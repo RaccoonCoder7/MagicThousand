@@ -21,8 +21,11 @@ public class LineSlider : MonoBehaviour
 
     private ShapeControl shapeControl;
 
+    private GameObject brushPoint;
+
     private void Start()
     {
+        brushPoint = GameObject.Find("brushPoint") as GameObject;
         scale = transform.localScale.x;
         startTr = transform.Find("start").GetComponent<Transform>();
         if (lineType == LineType.L)
@@ -36,7 +39,6 @@ public class LineSlider : MonoBehaviour
         }
         lr = GetComponent<LineRenderer>();
         shapeControl = transform.parent.GetComponent<ShapeControl>();
-        // 로컬스케일이 커짐에 따라 hieght, 및 각 함수의 return부분의 상수 값 변환이 필요할수도 있음.
     }
 
     public void SetColors(Vector3 hitPos)
@@ -77,11 +79,14 @@ public class LineSlider : MonoBehaviour
         );
         lr.colorGradient = gradient;
 
+        brushPoint.transform.position = hitPos;
         if (percent >= 1)
         {
             shapeControl.NextShape();
             prevPercent = 0;
         }
+
+        
     }
 
     private float drawI(float length, Vector3 hitPos)

@@ -9,11 +9,20 @@ public class Skybox : MonoBehaviour
     public Material skybox2;
     public Light light1;
     float intensity;
+    public GameObject fireEffect;
+    public GameObject treeEffect;
+    public GameObject soilEffect;
+    public MeshRenderer land;
+    public Texture tx;
+    private TouchMgr touchMgr;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         RenderSettings.skybox = skybox1;
+        touchMgr = GameObject.FindGameObjectWithTag("TouchMgr").GetComponent<TouchMgr>();
+        anim = GameObject.Find("NPC").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,6 +32,7 @@ public class Skybox : MonoBehaviour
 
     public IEnumerator Moon()
     {
+        touchMgr.skipObj.SetActive(false);
         intensity = light1.intensity;
         while (intensity >=0)
         {
@@ -38,10 +48,12 @@ public class Skybox : MonoBehaviour
             light1.intensity = intensity;
             yield return new WaitForSeconds(0.1f);
         }
+        touchMgr.EndDrawing();
     }
 
     public IEnumerator Sun()
     {
+        touchMgr.skipObj.SetActive(false);
         intensity = light1.intensity;
         while (intensity >= 0)
         {
@@ -57,6 +69,33 @@ public class Skybox : MonoBehaviour
             light1.intensity = intensity;
             yield return new WaitForSeconds(0.1f);
         }
+        touchMgr.EndDrawing();
+    }
 
+    public IEnumerator Fire()
+    {
+        touchMgr.skipObj.SetActive(false);
+        fireEffect.SetActive(true);
+        anim.SetTrigger("ATTACKED");
+        yield return new WaitForSeconds(3.0f);
+        Destroy(fireEffect);
+        touchMgr.EndDrawing();
+    }
+    public IEnumerator Tree()
+    {
+        touchMgr.skipObj.SetActive(false);
+        treeEffect.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        touchMgr.EndDrawing();
+    }
+    public IEnumerator Soil()
+    {
+        touchMgr.skipObj.SetActive(false);
+        soilEffect.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        land.material.SetTexture("_MainTex",tx);
+        yield return new WaitForSeconds(1.5f);
+        Destroy(soilEffect);
+        touchMgr.EndDrawing();
     }
 }

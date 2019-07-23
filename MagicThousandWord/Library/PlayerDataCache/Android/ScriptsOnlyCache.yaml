@@ -4,8 +4,10 @@ ScriptsOnlyBuild:
     - LineSlider
     - LobbyMgr
     - ShapeControl
+    - SimpleObjectMake
     - Skybox
     - TouchMgr
+    - UnityEngine.PostProcessing.PostProcessingBehaviour
     Oculus.VR.Editor.dll:
     - OVRConfig
     Oculus.VR.dll:
@@ -25,8 +27,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -56,11 +56,23 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 59
+      Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 92
       Script: {instanceID: 0}
@@ -71,35 +83,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9420}
+      Script: {instanceID: 9464}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9528}
     - Class: 114
-      Script: {instanceID: 9492}
+      Script: {instanceID: 9542}
     - Class: 114
-      Script: {instanceID: 9580}
+      Script: {instanceID: 9634}
     - Class: 114
-      Script: {instanceID: 9646}
+      Script: {instanceID: 9706}
     - Class: 114
-      Script: {instanceID: 9658}
+      Script: {instanceID: 9718}
     - Class: 114
-      Script: {instanceID: 9666}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9978}
+      Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 10228}
+      Script: {instanceID: 10070}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 10250}
     - Class: 114
-      Script: {instanceID: 10332}
+      Script: {instanceID: 10350}
     - Class: 114
-      Script: {instanceID: 10464}
+      Script: {instanceID: 10360}
     - Class: 114
-      Script: {instanceID: 18668}
+      Script: {instanceID: 10466}
     - Class: 114
-      Script: {instanceID: 108762}
+      Script: {instanceID: 10608}
+    - Class: 114
+      Script: {instanceID: 10970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -108,9 +122,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 183
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -145,7 +167,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 72
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -162,41 +190,41 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9420}
-    - Class: 114
-      Script: {instanceID: 9478}
-    - Class: 114
-      Script: {instanceID: 9520}
-    - Class: 114
-      Script: {instanceID: 9522}
+      Script: {instanceID: 9464}
     - Class: 114
       Script: {instanceID: 9528}
     - Class: 114
-      Script: {instanceID: 9534}
-    - Class: 114
-      Script: {instanceID: 9542}
-    - Class: 114
       Script: {instanceID: 9574}
     - Class: 114
-      Script: {instanceID: 9578}
+      Script: {instanceID: 9576}
     - Class: 114
-      Script: {instanceID: 9580}
+      Script: {instanceID: 9582}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9588}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9596}
     - Class: 114
-      Script: {instanceID: 9978}
+      Script: {instanceID: 9628}
     - Class: 114
-      Script: {instanceID: 10130}
+      Script: {instanceID: 9632}
     - Class: 114
-      Script: {instanceID: 10332}
+      Script: {instanceID: 9634}
     - Class: 114
-      Script: {instanceID: 10342}
+      Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10030}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10070}
+    - Class: 114
+      Script: {instanceID: 10236}
+    - Class: 114
+      Script: {instanceID: 10466}
+    - Class: 114
+      Script: {instanceID: 10476}
+    - Class: 114
+      Script: {instanceID: 10742}
+    - Class: 114
+      Script: {instanceID: 10878}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -538,6 +566,18 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -730,6 +770,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 3fbb1a5ffeb0d2dc3502a3dae62a7533
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.PostProcessing
+    className: PostProcessingBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: c51d2a1569bb404a12e837742887b609
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -898,6 +944,12 @@ ScriptsOnlyBuild:
     className: OVRPlatformMenu
   - hash:
       serializedVersion: 2
+      Hash: ff7f58b226cfe4de0dc241bd88d5a904
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Outline
+  - hash:
+      serializedVersion: 2
       Hash: a8c61f120a248e691d195a82070bb1fb
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -982,6 +1034,12 @@ ScriptsOnlyBuild:
     className: LobbyMgr
   - hash:
       serializedVersion: 2
+      Hash: 710fbf63dfbe83324704ddfff48a2a63
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Skybox
+  - hash:
+      serializedVersion: 2
       Hash: 7b6e37f22632e0a0d886d9c843e87905
     assemblyName: Assembly-CSharp.dll
     namespaceName: FantasySkyFree
@@ -1060,7 +1118,7 @@ ScriptsOnlyBuild:
     className: OVRGearVrControllerTest
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7913f51f410fa5dd4e6951a621a93702
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShapeControl
@@ -1072,7 +1130,7 @@ ScriptsOnlyBuild:
     className: ScaleChange
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 0c59e0cf6351fb275f239f9fc13c5da2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TouchMgr
@@ -1228,6 +1286,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: 337ed0e4806e8513bb62816686f74f23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.PostProcessing
+    className: PostProcessingProfile
+  - hash:
+      serializedVersion: 2
       Hash: 34c971ccf5a4d4c276f7753251cba95d
     assemblyName: Oculus.VR.dll
     namespaceName: 
@@ -1352,18 +1416,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MultiObjectMake
-  - hash:
-      serializedVersion: 2
-      Hash: ff7f58b226cfe4de0dc241bd88d5a904
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Outline
-  - hash:
-      serializedVersion: 2
-      Hash: 61b6cfbccfdb53b7fde3fcb2026bbb37
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Skybox
   platform: 13
   scenePathNames:
   - Assets/00.Scenes/StartScene.unity
