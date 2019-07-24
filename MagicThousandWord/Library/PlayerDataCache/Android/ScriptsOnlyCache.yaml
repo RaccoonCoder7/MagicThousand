@@ -24,9 +24,13 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -69,6 +73,8 @@ ScriptsOnlyBuild:
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -158,8 +164,6 @@ ScriptsOnlyBuild:
     - Class: 33
       Script: {instanceID: 0}
     - Class: 43
-      Script: {instanceID: 0}
-    - Class: 45
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -564,18 +568,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -1034,7 +1026,7 @@ ScriptsOnlyBuild:
     className: LobbyMgr
   - hash:
       serializedVersion: 2
-      Hash: 710fbf63dfbe83324704ddfff48a2a63
+      Hash: 64cb00eb4dbdf210e6f7e79cd2948d14
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Skybox
