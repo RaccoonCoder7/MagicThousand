@@ -67,6 +67,7 @@
     <Compile Include="Assets\01.Scripts\Outline.cs" />
     <Compile Include="Assets\01.Scripts\ShapeControl.cs" />
     <Compile Include="Assets\01.Scripts\Skybox.cs" />
+    <Compile Include="Assets\01.Scripts\SkyManager.cs" />
     <Compile Include="Assets\01.Scripts\TouchMgr.cs" />
     <Compile Include="Assets\99.ImportFiles\EpicVictoryEffects\Scripts\starFxController.cs" />
     <Compile Include="Assets\99.ImportFiles\EpicVictoryEffects\Scripts\vfxController.cs" />

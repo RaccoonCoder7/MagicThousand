@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1774610405}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.62573475, g: 0.69938093, b: 0.7833857, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -3678,6 +3678,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.000054786055
       objectReference: {fileID: 0}
+    - target: {fileID: 137696080703042802, guid: 6b2f9ed5eb4645b499bd684d0c75f0fe,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b2f9ed5eb4645b499bd684d0c75f0fe, type: 3}
 --- !u!1001 &689855439
@@ -5301,6 +5306,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 882134916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883043662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883043664}
+  - component: {fileID: 883043663}
+  m_Layer: 0
+  m_Name: SkyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &883043663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883043662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb66e51330ca8944ba42bccd7cf23a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &883043664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883043662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.312218, y: 7.1547513, z: -1.0401847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &908501019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6614,7 +6662,7 @@ PrefabInstance:
     - target: {fileID: 6522589091780669565, guid: 5bcbd0b1c1e83be4ead000f0fd9a5e55,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6522589091780669565, guid: 5bcbd0b1c1e83be4ead000f0fd9a5e55,
         type: 3}
@@ -10220,7 +10268,7 @@ Light:
     m_Type: 2
     m_Resolution: 3
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.803
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -10281,6 +10329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 74791866}
     m_Modifications:
+    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18f0a20f416c50c45af61f1e03fb57bd, type: 2}
     - target: {fileID: 4562904558318836, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.672806
@@ -10325,11 +10378,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 18f0a20f416c50c45af61f1e03fb57bd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
 --- !u!4 &1782495313 stripped
@@ -11043,6 +11091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRControllerPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1307870489563208, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+      propertyPath: m_TagString
+      value: TouchMgr
+      objectReference: {fileID: 0}
     - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11086,10 +11138,6 @@ PrefabInstance:
     - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1307870489563208, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
-      propertyPath: m_TagString
-      value: TouchMgr
       objectReference: {fileID: 0}
     - target: {fileID: 1000010178323718, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
       propertyPath: m_IsActive

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1817855386}
-  m_IndirectSpecularColor: {r: 0.62573475, g: 0.69938093, b: 0.7833857, a: 1}
+  m_IndirectSpecularColor: {r: 0.6226598, g: 0.6973849, b: 0.78177464, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2806,6 +2806,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 280788084}
     m_Modifications:
+    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b2b56775f50cfe4a9b77a3c83af5ca7, type: 2}
     - target: {fileID: 4562904558318836, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -2850,11 +2855,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9b2b56775f50cfe4a9b77a3c83af5ca7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
 --- !u!4 &233096845 stripped
@@ -16920,6 +16920,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 280788084}
     m_Modifications:
+    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fd9e273c4dc19434295f097ad21244e6, type: 2}
     - target: {fileID: 4562904558318836, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.67
@@ -16964,11 +16969,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -210
       objectReference: {fileID: 0}
-    - target: {fileID: 23399681029758680, guid: f3d8d1ac7d87b44438cdca777c66e2bd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fd9e273c4dc19434295f097ad21244e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d8d1ac7d87b44438cdca777c66e2bd, type: 3}
 --- !u!4 &1262620393 stripped
@@ -23177,6 +23177,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1409387664}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414312590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414312592}
+  - component: {fileID: 1414312591}
+  m_Layer: 0
+  m_Name: SkyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1414312591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414312590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb66e51330ca8944ba42bccd7cf23a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1414312592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414312590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.312218, y: 7.1547513, z: -1.0401847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1426929859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35590,11 +35633,11 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.884
     m_Bias: 0.05
-    m_NormalBias: 0
+    m_NormalBias: 0.05
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
