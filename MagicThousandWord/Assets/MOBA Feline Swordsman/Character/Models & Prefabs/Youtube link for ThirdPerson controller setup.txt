@@ -1,0 +1,2 @@
+﻿Link to a video showing an example of ThirdPerson controller setup :
+https://www.youtube.com/watch?v=sWiq5a1Fpsg
