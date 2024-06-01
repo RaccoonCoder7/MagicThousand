@@ -12,6 +12,7 @@ OVR을 숙달하기 위해 마법천자문VR을 제작</br>
 - 개발기간: 2019.07.16 - 2019.07.25
 - 사용기술: Unity, C#, OVR(Oculus Rift)
 - 참여자: RaccoonCoder7, LEEBYUNGNAM, smpk32
+- 담당: 붓 그리기 기능, 게임매니저, 효과 연출
 
 </br>
 
