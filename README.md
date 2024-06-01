@@ -3,6 +3,7 @@
 </div>
 
 <div align="left">
+혁신성장 청년인재 집중양성 VR/AR 과정에서 팀 프로젝트로 개발</br>
 OVR을 숙달하기 위해 마법천자문VR을 제작</br>
 </div>
 </br>
